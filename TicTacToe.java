@@ -1,20 +1,15 @@
-package com.sun;
-
-import java.util.Random;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import javax.swing.*;
 
 public class TicTacToe implements ActionListener{
-
 	Random random = new Random();
 	JFrame frame = new JFrame();
 	JPanel title_panel = new JPanel();
 	JPanel button_panel = new JPanel();
 	JLabel textfield = new JLabel();
-	JButton[] buttons = new JButton()[9];
+	JButton[] buttons = new JButton[9];
 	boolean player1_turn;
 
 	TicTacToe(){
@@ -41,7 +36,7 @@ public class TicTacToe implements ActionListener{
 		for(int i=0;i<9;i++) {
 			buttons[i] = new JButton();
 			button_panel.add(buttons[i]);
-			buttons[i].setFont(new Float("MV Boli",Font.BOLD,120));
+			buttons[i].setFont(new Font("MV Boli",Font.BOLD,120));
 			buttons[i].setFocusable(false);
 			buttons[i].addActionListener(this);
 		}
